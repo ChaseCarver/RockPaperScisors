@@ -18,19 +18,17 @@ switch (rpsRandom) {
 }
 //compare inputs, add winner to scoreboard, update outcome text
 if(rps == rpsRandom){
- outputOutcome.textContent = "I also chose " + rpsRandom + ", Tie! Try again!";
+ outputOutcome.textContent = `I also chose ${rpsRandom}, tie! Try again!`;
 }
 else if (rpsRandom == "paper" && rps == "rock" || rpsRandom == "rock" && rps == "scissors" || rpsRandom == "scissors" && rps == "paper"){
  computer++
- outputOutcome.textContent = "I choose " + rpsRandom + ", I win!";
- outputComputer.textContent = computer;
+ outputOutcome.textContent = `I choose ${rpsRandom}, I win!`;
+ outputComputer.textContent = `Computer score: ${computer}`;
 }
 else if (rpsRandom == "scissors" && rps == "rock" || rpsRandom == "paper" && rps == "scissors" || rpsRandom == "rock" && rps == "paper"){
- console.log("I choose " + rpsRandom + "!")
- console.log("You win!")
  player++
- outputOutcome.textContent = "I choose " + rpsRandom + ", You win!";
- outputPlayer.textContent = player;
+ outputOutcome.textContent = `I choose ${rpsRandom}, you win!`;
+ outputPlayer.textContent = `Player score: ${player}`;
 }
 }
 //link button to js
